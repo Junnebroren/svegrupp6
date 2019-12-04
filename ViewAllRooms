@@ -1,14 +1,11 @@
 package ViewAllRooms;
 
 
-
-
-
 import java.io.IOException;
 import java.util.Scanner;
 
 
-class ViewAllRooms {
+class Room {
 
     private static boolean MainMenu = true;
     private static boolean SubMenu = true;
