@@ -12,7 +12,6 @@ public class Main {
         do {
             myApp.menu();
             choice = input.nextInt();
-            input.next();
             switch (choice) {
                 case 1:
                     myApp.addBooking();
@@ -35,17 +34,18 @@ public class Main {
         System.out.println("2. Add Customer ");
         System.out.println("3. Show all rooms ");
         System.out.println("4. Show all customers ");
+        System.out.println("5. Exit");
     }
     private void addBooking(){
-
+        System.out.println("This is the addBooking method");
     }
     private void addCustomer(){
-
+        System.out.println("This is the addCustomer method");
     }
     private void allRooms() {
-
+        System.out.println("This is the allRooms method");
     }
     private void allCustomers(){
-
+        System.out.println("This is the allCostumers method");
     }
 }
