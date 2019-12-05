@@ -3,7 +3,7 @@ package Main;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ViewAllRooms {
+public class Rooms {
     private static boolean MainMenu = true;
     private static boolean SubMenu = true;
 
