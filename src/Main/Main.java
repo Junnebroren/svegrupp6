@@ -14,38 +14,40 @@ public class Main {
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    myApp.addBooking();
+                    myApp.Booking();
                     break;
                 case 2:
-                    myApp.addCustomer();
+                    myApp.Customer();
                     break;
                 case 3:
-                    myApp.allRooms();
-                    break;
-                case 4:
-                    myApp.allCustomers();
+                    myApp.Rooms();
                     break;
             }
-        } while (choice < 5);
+        } while (choice < 4);
     }
 
     private void menu() {
         System.out.println("1. Add Booking ");
         System.out.println("2. Add Customer ");
         System.out.println("3. Show all rooms ");
-        System.out.println("4. Show all customers ");
-        System.out.println("5. Exit");
+        System.out.println("4. Exit");
     }
-    private void addBooking(){
+    private void Booking(){
         System.out.println("This is the addBooking method");
     }
-    private void addCustomer(){
-        System.out.println("This is the addCustomer method");
+    private void Customer(){
+        System.out.println("Enter your social security number: ");
+        String ssn = input.nextLine();
+        System.out.println("Enter your age: ");
+        String age = input.nextLine();
+        System.out.println("Enter your name: ");
+        String name = input.nextLine();
+        input.next();
+        System.out.println("Enter your address: ");
+        String address = input.nextLine();
+        input.next();
     }
-    private void allRooms() {
+    private void Rooms() {
         System.out.println("This is the allRooms method");
-    }
-    private void allCustomers(){
-        System.out.println("This is the allCostumers method");
     }
 }

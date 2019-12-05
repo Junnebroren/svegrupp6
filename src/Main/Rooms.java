@@ -1,14 +1,12 @@
 package Main;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Rooms {
     private static boolean MainMenu = true;
     private static boolean SubMenu = true;
 
-
-    public static void main(String[] args) throws IOException {
+    public Rooms(){
         Scanner input = new Scanner(System.in);
         Room[] myHotel = new Room[10];
         myHotel[0] = new Room();
@@ -85,3 +83,4 @@ public class Rooms {
         }
     }
 }
+
