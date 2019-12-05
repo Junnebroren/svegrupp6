@@ -1,7 +1,9 @@
+package Main;
 
 import java.io.IOException;
 import java.util.Scanner;
 
+public class ViewAllRooms {
     private static boolean MainMenu = true;
     private static boolean SubMenu = true;
 
@@ -44,8 +46,8 @@ import java.util.Scanner;
             }
             SubMenu = true;
 
-            }
         }
+    }
 
     private static void CheckIfEmpty(Room[] myHotel) {
         for (int x = 0; x < myHotel.length; x++) {
@@ -83,4 +85,3 @@ import java.util.Scanner;
         }
     }
 }
-
