@@ -9,6 +9,7 @@ public class Main {
         Main myApp = new Main();
         int choice;
 
+
         do {
             myApp.menu();
             choice = input.nextInt();
