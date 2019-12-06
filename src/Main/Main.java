@@ -22,8 +22,12 @@ public class Main {
                 case 3:
                     myApp.Rooms();
                     break;
+                case 4:
+                    break;
+                default:
+                    System.out.println("Invalid choice");
             }
-        } while (choice < 4);
+        } while (choice != 4);
     }
 
     private void menu() {
@@ -33,21 +37,28 @@ public class Main {
         System.out.println("4. Exit");
     }
     private void Booking(){
-        System.out.println("This is the addBooking method");
+        System.out.println("Enter your social security number: ");
+        String ssn = input.nextLine();
+        input.nextLine();
+        System.out.println("What room do you want to book? ");
+        String roomNr = input.nextLine();
+        Booking booking = new Booking(ssn, roomNr);
     }
     private void Customer(){
         System.out.println("Enter your social security number: ");
         String ssn = input.nextLine();
+        input.nextLine();
         System.out.println("Enter your age: ");
-        String age = input.nextLine();
+        int age = input.nextInt();
         System.out.println("Enter your name: ");
         String name = input.nextLine();
         input.next();
         System.out.println("Enter your address: ");
         String address = input.nextLine();
         input.next();
+        Customer customer = new Customer(ssn, age, name, address);
     }
     private void Rooms() {
-        System.out.println("This is the allRooms method");
+
     }
 }

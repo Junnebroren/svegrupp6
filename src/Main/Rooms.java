@@ -19,7 +19,7 @@ public class Rooms {
         myHotel[7] = new Room();
         myHotel[8] = new Room();
         myHotel[9] = new Room();
-        int roomNum = 0;
+       // int roomNum = 0;
         initialise(myHotel);
         while (MainMenu) {
             while (SubMenu) {
@@ -32,9 +32,7 @@ public class Rooms {
                         break;
                 }
                 System.out.println("------------------------------------------------------");
-                System.out.println("------------------------------------------------------");
                 System.out.println("Would you like to Choose another Option?\n1 ) Yes\n2 ) No");
-                System.out.println("------------------------------------------------------");
                 System.out.println("------------------------------------------------------");
                 if (input.nextInt() == 1) {
                     SubMenu = true;
@@ -43,10 +41,8 @@ public class Rooms {
                 }
             }
             SubMenu = true;
-
         }
     }
-
     private static void CheckIfEmpty(Room[] myHotel) {
         for (int x = 0; x < myHotel.length; x++) {
             if (myHotel[x].getName().equals("nobody")) {
@@ -65,7 +61,6 @@ public class Rooms {
         }
     }
     public static class Room {
-
         //protected String mainName;
         private String mainName;
         int guestsInRoom;

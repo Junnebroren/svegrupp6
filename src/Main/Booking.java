@@ -1,11 +1,12 @@
 package Main;
 
 public class Booking {
-    private String roomNr, roomCustomer;
+    private String roomNr;
+    private String customerSsn;
 
-    public Booking(String roomNr, String roomCustomer) {
+    public Booking(String roomNr, String customerSsn) {
         this.roomNr = roomNr;
-        this.roomCustomer = roomCustomer;
+        this.customerSsn = customerSsn;
     }
 
     public String getRoomNr() {
@@ -16,11 +17,11 @@ public class Booking {
         this.roomNr = roomNr;
     }
 
-    public String getRoomCustomer() {
-        return roomCustomer;
+    public String getCustomerSsn() {
+        return customerSsn;
     }
 
-    public void setRoomCustomer(String roomCustomer) {
-        this.roomCustomer = roomCustomer;
+    public void setCustomerSsn(String customerSsn) {
+        this.customerSsn = customerSsn;
     }
 }
