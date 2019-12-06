@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Main myApp = new Main();
         int choice;
+
         do {
             myApp.menu();
             choice = input.nextInt();
