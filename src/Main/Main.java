@@ -1,9 +1,10 @@
 package Main;
+
 import java.util.Scanner;
 
 public class Main {
     static Scanner input = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
         Main myApp = new Main();
         int choice;
@@ -13,13 +14,13 @@ public class Main {
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    myApp.Booking();
+                    myApp.addBooking();
                     break;
                 case 2:
-                    myApp.Customer();
+                    myApp.addCustomer();
                     break;
                 case 3:
-                    myApp.Rooms();
+                    myApp.addRooms();
                     break;
                 case 4:
                     break;
@@ -35,7 +36,7 @@ public class Main {
         System.out.println("3. Show all rooms ");
         System.out.println("4. Exit");
     }
-    private void Booking(){
+    private void addBooking(){
         System.out.println("Enter your social security number: ");
         String ssn = input.nextLine();
         input.nextLine();
@@ -43,7 +44,16 @@ public class Main {
         String roomNr = input.nextLine();
         Booking booking = new Booking(ssn, roomNr);
     }
-    private void Customer(){
+    private void viewBooking () {
+
+    }
+    private void editBooking () {
+
+    }
+    private void removeBooking(){
+
+    }
+    private void addCustomer(){
         System.out.println("Enter your social security number: ");
         String ssn = input.nextLine();
         input.nextLine();
@@ -57,7 +67,27 @@ public class Main {
         input.next();
         Customer customer = new Customer(ssn, age, name, address);
     }
-    private void Rooms() {
+    private void viewCustomer () {
 
     }
+    private void editCustomer () {
+
+    }
+    private void removeCustomer(){
+
+    }
+    private void addRooms() {
+
+    }
+    private void viewRoom () {
+
+    }
+    private void editRoom () {
+
+    }
+    private void removeRoom (){
+
+    }
+
+
 }
