@@ -2,15 +2,15 @@ package Main;
 
 public class Customer {
     private String ssn;
-    private int age;
     private String name;
     private String address;
+    private String telephoneNumber;
 
-    public Customer(String ssn, int age, String name, String address) {
+    public Customer(String ssn, String name, String address, String telephoneNumber) {
         this.ssn = ssn;
-        this.age = age;
         this.name = name;
         this.address = address;
+        this.telephoneNumber = telephoneNumber;
     }
 
     public String getSsn() {
@@ -19,14 +19,6 @@ public class Customer {
 
     public void setSsn(String ssn) {
         this.ssn = ssn;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getName() {
@@ -43,6 +35,14 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(String telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
     }
 }
 
