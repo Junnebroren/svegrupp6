@@ -20,7 +20,7 @@ public class Main {
                     myApp.addCustomer();
                     break;
                 case 3:
-                    myApp.addRooms();
+                    myApp.addRoom();
                     break;
                 case 4:
                     break;
@@ -31,9 +31,9 @@ public class Main {
     }
 
     private void menu() {
-        System.out.println("1. Add Booking ");
-        System.out.println("2. Add Customer ");
-        System.out.println("3. Show all rooms ");
+        System.out.println("1. Booking ");
+        System.out.println("2. Customer ");
+        System.out.println("3. Room ");
         System.out.println("4. Exit");
     }
     private void addBooking(){
@@ -48,7 +48,6 @@ public class Main {
 
     }
     private void editBooking () {
-
     }
     private void removeBooking(){
 
@@ -65,7 +64,10 @@ public class Main {
         System.out.println("Enter your address: ");
         String address = input.nextLine();
         input.next();
-        Customer customer = new Customer(ssn, age, name, address);
+        System.out.println("Enter telephone number: ");
+        String telephoneNumber = input.nextLine();
+        input.nextLine();
+        Customer customer = new Customer(ssn, name, address, telephoneNumber);
     }
     private void viewCustomer () {
 
@@ -76,7 +78,7 @@ public class Main {
     private void removeCustomer(){
 
     }
-    private void addRooms() {
+    private void addRoom() {
 
     }
     private void viewRoom () {
@@ -88,6 +90,5 @@ public class Main {
     private void removeRoom (){
 
     }
-
 
 }
