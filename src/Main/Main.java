@@ -56,8 +56,6 @@ public class Main {
         System.out.println("Enter your social security number: ");
         String ssn = input.nextLine();
         input.nextLine();
-        System.out.println("Enter your age: ");
-        int age = input.nextInt();
         System.out.println("Enter your name: ");
         String name = input.nextLine();
         input.next();
