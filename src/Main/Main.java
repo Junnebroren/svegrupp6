@@ -26,7 +26,7 @@ public class Main {
                 case 4:
                     break;
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid choice!");
             }
         } while (choice != 4);
     }
@@ -39,12 +39,12 @@ public class Main {
     }
 
     private void Booking() {
-
         System.out.println("1. New booking ");
         System.out.println("2. Edit booking ");
         System.out.println("3. View booking ");
         System.out.println("4. Remove booking");
-        System.out.println("5. exit");
+        System.out.println("5. Exit");
+
         int choice2;
         choice2 = input.nextInt();
         if (choice2 == 1) {
@@ -59,28 +59,31 @@ public class Main {
             LocalDate checkInDate = LocalDate.parse(input.next());
             System.out.println("Date of check-out: ");
             LocalDate checkOutDate = LocalDate.parse(input.next());
-            //  System.out.println("Price: " + totalPrice);
             Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
+            System.out.println("Price:  " + booking.getTotalPrice() + "kr");
+
         } else if (choice2 == 2) {
             System.out.println("bla bla");
 
         } else if (choice2 == 3) {
             System.out.println("hej hej");
+
         } else if (choice2 == 4) {
 
-        } else if (choice2 == 5) {
 
+        } else if (choice2 == 5) {
+            System.out.println("Exit");
         }
     }
 
 
     private void Customer() {
-
         System.out.println("1. New customer ");
         System.out.println("2. Edit customer ");
         System.out.println("3. View customer ");
         System.out.println("4. Remove customer");
-        System.out.println("5. exit");
+        System.out.println("5. Exit");
+
         int choice3;
         choice3 = input.nextInt();
         if (choice3 == 1) {
@@ -103,11 +106,12 @@ public class Main {
 
         } else if (choice3 == 3) {
             System.out.println("hej hej");
+
         } else if (choice3 == 4) {
 
 
         } else if (choice3 == 5) {
-
+            System.out.println("Exit");
         }
     }
 
@@ -116,7 +120,8 @@ public class Main {
             System.out.println("2. Edit room ");
             System.out.println("3. View room ");
             System.out.println("4. Remove room");
-            System.out.println("5. exit");
+            System.out.println("5. Exit");
+
             int choice4;
             choice4 = input.nextInt();
             if (choice4 == 1) {
@@ -126,11 +131,12 @@ public class Main {
 
             } else if (choice4 == 2) {
                 System.out.println("hej hej");
+
             } else if (choice4 == 1) {
 
 
             } else if (choice4 == 5) {
-                System.out.println("hejhej");
+                System.out.println("Exit");
             }
         }
     }
