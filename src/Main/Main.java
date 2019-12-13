@@ -109,6 +109,7 @@ public class Main {
         } else if (choice3 == 5) {
 
         }
+    }
 
         private void Room () {
             System.out.println("1. New room ");
@@ -133,7 +134,7 @@ public class Main {
             }
         }
     }
-}
+
 
 
 
