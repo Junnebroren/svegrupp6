@@ -1,5 +1,6 @@
 package Main;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -37,18 +38,25 @@ public class Main {
         System.out.println("4. Exit");
     }
     private void addBooking(){
-        System.out.println("Enter your social security number: ");
-        String ssn = input.nextLine();
-        input.nextLine();
         System.out.println("What room do you want to book? ");
         String roomNr = input.nextLine();
-        Booking booking = new Booking(ssn, roomNr);
+        input.nextLine();
+        System.out.println("Enter your social security number: ");
+        String customerSsn = input.nextLine();
+        System.out.println("Enter Booking ID: ");
+        int bookingId = input.nextInt();
+        System.out.println("Date of check-in: ");
+        LocalDate checkInDate = LocalDate.parse(input.next());
+        System.out.println("Date of check-out: ");
+        LocalDate checkOutDate = LocalDate.parse(input.next());
+      //  System.out.println("Price: " + totalPrice);
+        Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
     }
     private void viewBooking () {
 
     }
     private void editBooking () {
-        
+
     }
     private void removeBooking(){
 
