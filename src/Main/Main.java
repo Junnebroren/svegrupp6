@@ -43,10 +43,11 @@ public class Main {
         System.out.println("1. New booking ");
         System.out.println("2. Edit booking ");
         System.out.println("3. View booking ");
-        System.out.println("4. Exit");
-        String choice2;
-        choice2 = input.nextLine();
-        if (choice2.equals("1")) {
+        System.out.println("4. Remove booking");
+        System.out.println("5. exit");
+        int choice2;
+        choice2 = input.nextInt();
+        if (choice2 == 1) {
             System.out.println("What room do you want to book? ");
             String roomNr = input.nextLine();
             input.nextLine();
@@ -60,40 +61,29 @@ public class Main {
             LocalDate checkOutDate = LocalDate.parse(input.next());
             //  System.out.println("Price: " + totalPrice);
             Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
-        } else if (choice2.equals("2")) {
+        } else if (choice2 == 2) {
             System.out.println("bla bla");
 
-        } else if (choice2.equals("3")) {
+        } else if (choice2 == 3) {
             System.out.println("hej hej");
-        } else if (choice2.equals("4")) {
+        } else if (choice2 == 4) {
 
+        } else if (choice2 == 5) {
 
         }
-
     }
 
-
-
-    private void viewBooking() {
-
-    }
-
-    private void editBooking() {
-
-    }
-
-    private void removeBooking() {
-
-    }
 
     private void Customer() {
+
         System.out.println("1. New customer ");
         System.out.println("2. Edit customer ");
         System.out.println("3. View customer ");
-        System.out.println("4. Exit");
-        String choice3;
-        choice3 = input.nextLine();
-        if (choice3.equals("1")) {
+        System.out.println("4. Remove customer");
+        System.out.println("5. exit");
+        int choice3;
+        choice3 = input.nextInt();
+        if (choice3 == 1) {
             System.out.println("Enter your social security number: ");
             String ssn = input.nextLine();
             input.nextLine();
@@ -108,67 +98,42 @@ public class Main {
             input.nextLine();
             Customer customer = new Customer(ssn, name, address, telephoneNumber);
 
-        } else if (choice3.equals("2")) {
+        } else if (choice3 == 2) {
             System.out.println("bla bla");
 
-        } else if (choice3.equals("3")) {
+        } else if (choice3 == 3) {
             System.out.println("hej hej");
-        } else if (choice3.equals("4")) {
+        } else if (choice3 == 4) {
 
+
+        } else if (choice3 == 5) {
 
         }
 
-    }
+        private void Room () {
+            System.out.println("1. New room ");
+            System.out.println("2. Edit room ");
+            System.out.println("3. View room ");
+            System.out.println("4. Remove room");
+            System.out.println("5. exit");
+            int choice4;
+            choice4 = input.nextInt();
+            if (choice4 == 1) {
+
+            } else if (choice4 == 2) {
+                System.out.println("bla bla");
+
+            } else if (choice4 == 2) {
+                System.out.println("hej hej");
+            } else if (choice4 == 1) {
 
 
-
-    private void viewCustomer() {
-
-    }
-
-    private void editCustomer() {
-
-    }
-
-    private void removeCustomer() {
-
-    }
-
-    private void Room() {
-        System.out.println("1. New room ");
-        System.out.println("2. Edit room ");
-        System.out.println("3. View room ");
-        System.out.println("4. Exit");
-        String choice4;
-        choice4 = input.nextLine();
-        if (choice4.equals("1")) {
-
-        } else if (choice4.equals("2")) {
-            System.out.println("bla bla");
-
-        } else if (choice4.equals("3")) {
-            System.out.println("hej hej");
-        } else if (choice4.equals("4")) {
-
-
+            } else if (choice4 == 5) {
+                System.out.println("hejhej");
+            }
         }
-
     }
-
-
-
-
-
-    private void viewRoom() {
-
-    }
-
-    private void editRoom() {
-
-    }
-
-    private void removeRoom() {
-
-    }
-
 }
+
+
+
