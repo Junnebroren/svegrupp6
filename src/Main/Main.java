@@ -2,6 +2,7 @@ package Main;
 
 import java.util.Scanner;
 import java.time.LocalDate;
+
 public class Main {
     static Scanner input = new Scanner(System.in);
 
@@ -36,11 +37,12 @@ public class Main {
         System.out.println("3. Room ");
         System.out.println("4. Exit");
     }
+
     private void Booking() {
 
-        System.out.println("1. Booking ");
-        System.out.println("2. edit booking ");
-        System.out.println("3. view booking ");
+        System.out.println("1. New booking ");
+        System.out.println("2. Edit booking ");
+        System.out.println("3. View booking ");
         System.out.println("4. Exit");
         String choice2;
         choice2 = input.nextLine();
@@ -62,55 +64,110 @@ public class Main {
             System.out.println("bla bla");
 
         } else if (choice2.equals("3")) {
+            System.out.println("hej hej");
+        } else if (choice2.equals("4")) {
 
-        } else (choice2.equals("4")) {
-            System.out.println("exit");
+
         }
-    }
-
-    private void viewBooking () {
 
     }
-    private void editBooking () {
+
+
+
+    private void viewBooking() {
 
     }
-    private void removeBooking(){
+
+    private void editBooking() {
 
     }
-    private void Customer(){
-        System.out.println("Enter your social security number: ");
-        String ssn = input.nextLine();
-        input.nextLine();
-        System.out.println("Enter your name: ");
-        String name = input.nextLine();
-        input.next();
-        System.out.println("Enter your address: ");
-        String address = input.nextLine();
-        input.next();
-        System.out.println("Enter telephone number: ");
-        String telephoneNumber = input.nextLine();
-        input.nextLine();
-        Customer customer = new Customer(ssn, name, address, telephoneNumber);
-    }
-    private void viewCustomer () {
+
+    private void removeBooking() {
 
     }
-    private void editCustomer () {
+
+    private void Customer() {
+        System.out.println("1. New customer ");
+        System.out.println("2. Edit customer ");
+        System.out.println("3. View customer ");
+        System.out.println("4. Exit");
+        String choice3;
+        choice3 = input.nextLine();
+        if (choice3.equals("1")) {
+            System.out.println("Enter your social security number: ");
+            String ssn = input.nextLine();
+            input.nextLine();
+            System.out.println("Enter your name: ");
+            String name = input.nextLine();
+            input.next();
+            System.out.println("Enter your address: ");
+            String address = input.nextLine();
+            input.next();
+            System.out.println("Enter telephone number: ");
+            String telephoneNumber = input.nextLine();
+            input.nextLine();
+            Customer customer = new Customer(ssn, name, address, telephoneNumber);
+
+        } else if (choice3.equals("2")) {
+            System.out.println("bla bla");
+
+        } else if (choice3.equals("3")) {
+            System.out.println("hej hej");
+        } else if (choice3.equals("4")) {
+
+
+        }
 
     }
-    private void removeCustomer(){
+
+
+
+    private void viewCustomer() {
 
     }
+
+    private void editCustomer() {
+
+    }
+
+    private void removeCustomer() {
+
+    }
+
     private void Room() {
+        System.out.println("1. New room ");
+        System.out.println("2. Edit room ");
+        System.out.println("3. View room ");
+        System.out.println("4. Exit");
+        String choice4;
+        choice4 = input.nextLine();
+        if (choice4.equals("1")) {
+
+        } else if (choice4.equals("2")) {
+            System.out.println("bla bla");
+
+        } else if (choice4.equals("3")) {
+            System.out.println("hej hej");
+        } else if (choice4.equals("4")) {
+
+
+        }
 
     }
-    private void viewRoom () {
+
+
+
+
+
+    private void viewRoom() {
 
     }
-    private void editRoom () {
+
+    private void editRoom() {
 
     }
-    private void removeRoom (){
+
+    private void removeRoom() {
 
     }
 
