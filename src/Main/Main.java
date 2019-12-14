@@ -1,7 +1,8 @@
 package Main;
 
-import java.util.Scanner;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     static Scanner input = new Scanner(System.in);
@@ -9,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Main myApp = new Main();
         int choice;
+
 
         do {
             myApp.menu();
@@ -61,6 +63,9 @@ public class Main {
             LocalDate checkOutDate = LocalDate.parse(input.next());
             Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
             System.out.println("Price:  " + booking.getTotalPrice() + "kr");
+           ArrayList<Booking> bookings = new ArrayList<Booking>();
+           bookings.add(booking);
+
 
         } else if (choice2 == 2) {
             System.out.println("bla bla");
@@ -100,6 +105,8 @@ public class Main {
             String telephoneNumber = input.nextLine();
             input.nextLine();
             Customer customer = new Customer(ssn, name, address, telephoneNumber);
+            ArrayList<Customer> customers = new ArrayList<Customer>();
+            customers.add(customer);
 
         } else if (choice3 == 2) {
             System.out.println("bla bla");
