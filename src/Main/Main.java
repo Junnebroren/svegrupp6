@@ -11,19 +11,18 @@ public class Main {
         Main myApp = new Main();
         int choice;
 
-
         do {
             myApp.menu();
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    myApp.Booking();
+                    myApp.ViewBookingOptions();
                     break;
                 case 2:
-                    myApp.Customer();
+                    myApp.ViewCustomerOptions();
                     break;
                 case 3:
-                    myApp.Room();
+                    myApp.ViewRoomOptions();
                     break;
                 case 4:
                     break;
@@ -40,7 +39,7 @@ public class Main {
         System.out.println("4. Exit");
     }
 
-    private void Booking() {
+    private void ViewBookingOptions() {
         System.out.println("1. New booking ");
         System.out.println("2. Edit booking ");
         System.out.println("3. View booking ");
@@ -66,78 +65,72 @@ public class Main {
            ArrayList<Booking> bookings = new ArrayList<Booking>();
            bookings.add(booking);
 
-
         } else if (choice2 == 2) {
-            System.out.println("bla bla");
+            System.out.println("Edit Booking option");
 
         } else if (choice2 == 3) {
-            System.out.println("hej hej");
+            System.out.println("View Booking option");
 
         } else if (choice2 == 4) {
-
+            System.out.println("Remove Booking option");
 
         } else if (choice2 == 5) {
-            System.out.println("Exit");
+            System.out.println("Exit option");
         }
     }
 
-
-    private void Customer() {
+    private void ViewCustomerOptions() {
         System.out.println("1. New customer ");
         System.out.println("2. Edit customer ");
         System.out.println("3. View customer ");
         System.out.println("4. Remove customer");
         System.out.println("5. Exit");
 
+        Customer customer = new Customer("0", "A", "123", "456");
         int choice3;
         choice3 = input.nextInt();
         if (choice3 == 1) {
             System.out.println("Enter your social security number: ");
-            String ssn = input.nextLine();
+            customer.setSsn(input.nextLine());
             input.nextLine();
             System.out.println("Enter your name: ");
-            String name = input.nextLine();
-            input.next();
+            customer.setName(input.nextLine());
             System.out.println("Enter your address: ");
-            String address = input.nextLine();
-            input.next();
+            customer.setAddress(input.nextLine());
             System.out.println("Enter telephone number: ");
-            String telephoneNumber = input.nextLine();
-            input.nextLine();
-            Customer customer = new Customer(ssn, name, address, telephoneNumber);
+            customer.setTelephoneNumber(input.nextLine());
             ArrayList<Customer> customers = new ArrayList<Customer>();
             customers.add(customer);
 
         } else if (choice3 == 2) {
-           for (int i=0,i<customer.size(),i++){
-               System.out.println((i+1)+ customer.get(i));
+         /* for (int i=0,i<Customer.size(),i++){
+               System.out.println((i+1)+ Customer.get(i));
 
             }
             System.out.println("number for person you want to change");
-           change = input.nextInt();
+           int change = input.nextInt();
            System.out.println("what do you want to change")
-           customer.setname(change-1);
+           customer.setName(input.nextLine();
            System.out.println(("1.Name"),("2 bal"));
            change = input.nextInt();
            if (change==1){
-               customer.setName(input.nextLine());
+               Customer.setName(input.nextLine());
            }
-
+          */
 
         } else if (choice3 == 3) {
-
+            System.out.println("View Customer option");
 
         } else if (choice3 == 4) {
-
-
+            System.out.println("Remove Customer option");
 
         } else if (choice3 == 5) {
-            System.out.println("Exit");
+            System.out.println("Exit option");
         }
     }
 
-        private void Room () {
-            System.out.println("1. New room ");
+        private void ViewRoomOptions() {
+            System.out.println("1. Add room ");
             System.out.println("2. Edit room ");
             System.out.println("3. View room ");
             System.out.println("4. Remove room");
@@ -146,18 +139,19 @@ public class Main {
             int choice4;
             choice4 = input.nextInt();
             if (choice4 == 1) {
+                System.out.println("Add room option");
 
             } else if (choice4 == 2) {
-                System.out.println("bla bla");
+                System.out.println("Edit Room option");
 
-            } else if (choice4 == 2) {
-                System.out.println("hej hej");
+            } else if (choice4 == 3) {
+                System.out.println("View Room option");
 
-            } else if (choice4 == 1) {
-
+            } else if (choice4 == 4) {
+                System.out.println("Remove Room option");
 
             } else if (choice4 == 5) {
-                System.out.println("Exit");
+                System.out.println("Exit option");
             }
         }
     }
