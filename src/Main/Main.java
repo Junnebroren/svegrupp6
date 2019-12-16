@@ -109,12 +109,26 @@ public class Main {
             customers.add(customer);
 
         } else if (choice3 == 2) {
-            System.out.println("bla bla");
+           for (int i=0,i<customer.size(),i++){
+               System.out.println((i+1)+ customer.get(i));
+
+            }
+            System.out.println("number for person you want to change");
+           change = input.nextInt();
+           System.out.println("what do you want to change")
+           customer.setname(change-1);
+           System.out.println(("1.Name"),("2 bal"));
+           change = input.nextInt();
+           if (change==1){
+               customer.setName(input.nextLine());
+           }
+
 
         } else if (choice3 == 3) {
-            System.out.println("hej hej");
+
 
         } else if (choice3 == 4) {
+
 
 
         } else if (choice3 == 5) {
