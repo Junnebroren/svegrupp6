@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner input = new Scanner(System.in);
+    ArrayList<Booking> bookings = new ArrayList<Booking>();
+
 
     public static void main(String[] args) {
         Main myApp = new Main();
@@ -40,6 +42,7 @@ public class Main {
     }
 
     private void ViewBookingOptions() {
+
         System.out.println("1. New booking ");
         System.out.println("2. Edit booking ");
         System.out.println("3. View booking ");
@@ -50,8 +53,8 @@ public class Main {
         choice2 = input.nextInt();
         if (choice2 == 1) {
             System.out.println("What room do you want to book? ");
-            String roomNr = input.nextLine();
             input.nextLine();
+            String roomNr = input.nextLine();
             System.out.println("Enter your social security number: ");
             String customerSsn = input.nextLine();
             System.out.println("Enter Booking ID: ");
@@ -62,7 +65,7 @@ public class Main {
             LocalDate checkOutDate = LocalDate.parse(input.next());
             Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
             System.out.println("Price:  " + booking.getTotalPrice() + "kr");
-           ArrayList<Booking> bookings = new ArrayList<Booking>();
+
            bookings.add(booking);
 
         } else if (choice2 == 2) {
@@ -70,6 +73,9 @@ public class Main {
 
         } else if (choice2 == 3) {
             System.out.println("View Booking option");
+            for (Booking booking : bookings) {
+                System.out.println(booking);
+            }
 
         } else if (choice2 == 4) {
             System.out.println("Remove Booking option");

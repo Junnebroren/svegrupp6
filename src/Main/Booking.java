@@ -66,5 +66,17 @@ public class Booking {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "roomNr='" + roomNr + '\'' +
+                ", customerSsn='" + customerSsn + '\'' +
+                ", bookingId=" + bookingId +
+                ", checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
 }
 
