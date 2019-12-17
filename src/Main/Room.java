@@ -55,7 +55,17 @@ public class Room {
     public void setNumberOfBeds(int numberOfBeds) {
         this.numberOfBeds = numberOfBeds;
     }
+
+    @Override
+    public String toString() {
+        return "Room " + roomNb + "." +
+                " Balcony = " + hasBalcony + "."
+                + " Price/Night = " + pricePerNight + "."
+                + " Booked/Available = " + isBooked + "."
+                + " Number of beds = " + numberOfBeds + "\n";
+    }
 }
+
 
 
 
