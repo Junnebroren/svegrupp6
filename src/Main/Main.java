@@ -8,6 +8,7 @@ public class Main {
     static Scanner input = new Scanner(System.in);
     ArrayList<Booking> bookings = new ArrayList<Booking>();
     ArrayList<Customer> customers = new ArrayList<Customer>();
+    ArrayList<Room> rooms = new ArrayList<Room>();
     static Main myApp2 = new Main();
 
     public static void main(String[] args) {
@@ -71,7 +72,7 @@ public class Main {
             LocalDate checkInDate = LocalDate.parse(input.next());
             System.out.println("Date of check-out: ");
             LocalDate checkOutDate = LocalDate.parse(input.next());
-            Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
+            Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 0);
             System.out.println("Price:  " + booking.getTotalPrice() + "kr");
             bookings.add(booking);
 
@@ -148,26 +149,21 @@ public class Main {
             int choice4;
             choice4 = input.nextInt();
             if (choice4 == 1) {
+
                 System.out.println("Add room option");
 
             } else if (choice4 == 2) {
                 System.out.println("Edit Room option");
 
             } else if (choice4 == 3) {
-                System.out.println("View Room option");
-
-                ArrayList<String> rooms =new ArrayList<>();
-                rooms.add("Room 1");
-                rooms.add("Room 2");
-                rooms.add("Room 3");
-                rooms.add("Room 4");
-                rooms.add("Room 5");
-                rooms.add("Room 6");
-                rooms.add("Room 7");
-                rooms.add("Room 8");
-                rooms.add("Room 9");
-                rooms.add("Room 10");
+                Room room1 = new Room(1, false, 200, false, 2);
+                Room room2 = new Room(2, false, 400, false, 2);
+                Room room3 = new Room(3, false, 600, false, 3);
+                Room room4 = new Room(4, true, 800, false, 4);
+                Room room5 = new Room(5, true, 1000, false, 6);
+                rooms.add(room1); rooms.add(room2); rooms.add(room3); rooms.add(room4); rooms.add(room5);
                 System.out.println(rooms);
+                System.out.println("View Room option");
 
             } else if (choice4 == 4) {
                 System.out.println("Remove Room option");
@@ -178,4 +174,4 @@ public class Main {
             }
         }
     }
-    
+
