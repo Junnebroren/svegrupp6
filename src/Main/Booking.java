@@ -70,12 +70,12 @@ public class Booking {
     @Override
     public String toString() {
         return "Booking{" +
-                "roomNr='" + roomNr + '\'' +
-                ", customerSsn='" + customerSsn + '\'' +
-                ", bookingId=" + bookingId +
-                ", checkInDate=" + checkInDate +
-                ", checkOutDate=" + checkOutDate +
-                ", totalPrice=" + totalPrice +
+                "room nr '" + roomNr + '\'' +
+                ", social security number is '" + customerSsn + '\'' +
+                ", booking id is " + bookingId +
+                ", check in-Date is " + checkInDate +
+                ", checkout-Date is " + checkOutDate +
+                ", total price is " + totalPrice + "Kr"+
                 '}';
     }
 }
