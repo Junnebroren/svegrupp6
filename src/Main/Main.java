@@ -156,11 +156,26 @@ public class Main {
             } else if (choice4 == 3) {
                 System.out.println("View Room option");
 
+                ArrayList<String> rooms =new ArrayList<>();
+                rooms.add("Room 1");
+                rooms.add("Room 2");
+                rooms.add("Room 3");
+                rooms.add("Room 4");
+                rooms.add("Room 5");
+                rooms.add("Room 6");
+                rooms.add("Room 7");
+                rooms.add("Room 8");
+                rooms.add("Room 9");
+                rooms.add("Room 10");
+                System.out.println(rooms);
+
             } else if (choice4 == 4) {
                 System.out.println("Remove Room option");
 
             } else if (choice4 == 5) {
                 System.out.println("Exit option");
+
             }
         }
     }
+    
