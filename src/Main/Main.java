@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Main {
     static Scanner input = new Scanner(System.in);
     ArrayList<Booking> bookings = new ArrayList<Booking>();
-
+    ArrayList<Customer> customers = new ArrayList<Customer>();
+    static Main myApp2 = new Main();
 
     public static void main(String[] args) {
         Main myApp = new Main();
@@ -41,8 +42,15 @@ public class Main {
         System.out.println("4. Exit");
     }
 
-    private void ViewBookingOptions() {
+    private void GetBooking() {
+        for (int i = 0; i < bookings.size(); i++) {
+            System.out.println(bookings.get(i - 1));
+        }
+        System.out.println(bookings);
+        System.out.println("Which booking would you like to edit? ");
+    }
 
+    private void ViewBookingOptions() {
         System.out.println("1. New booking ");
         System.out.println("2. Edit booking ");
         System.out.println("3. View booking ");
@@ -65,10 +73,10 @@ public class Main {
             LocalDate checkOutDate = LocalDate.parse(input.next());
             Booking booking = new Booking(roomNr, customerSsn, bookingId, checkInDate, checkOutDate, 1000);
             System.out.println("Price:  " + booking.getTotalPrice() + "kr");
-
-           bookings.add(booking);
+            bookings.add(booking);
 
         } else if (choice2 == 2) {
+            myApp2.GetBooking();
             System.out.println("Edit Booking option");
 
         } else if (choice2 == 3) {
@@ -85,6 +93,12 @@ public class Main {
         }
     }
 
+    private void GetCustomer() {
+        for (int i = 0; i < customers.size(); i++) {
+            System.out.println(customers.get(i - 1));
+        }
+    }
+
     private void ViewCustomerOptions() {
         System.out.println("1. New customer ");
         System.out.println("2. Edit customer ");
@@ -92,50 +106,39 @@ public class Main {
         System.out.println("4. Remove customer");
         System.out.println("5. Exit");
 
-        Customer customer = new Customer("0", "A", "123", "456");
         int choice3;
         choice3 = input.nextInt();
         if (choice3 == 1) {
             System.out.println("Enter your social security number: ");
-            customer.setSsn(input.nextLine());
+            String ssn = input.nextLine();
             input.nextLine();
             System.out.println("Enter your name: ");
-            customer.setName(input.nextLine());
+            String name = input.nextLine();
             System.out.println("Enter your address: ");
-            customer.setAddress(input.nextLine());
+            String address = input.nextLine();
             System.out.println("Enter telephone number: ");
-            customer.setTelephoneNumber(input.nextLine());
-            ArrayList<Customer> customers = new ArrayList<Customer>();
+            String telephoneNumber = input.nextLine();
+            Customer customer = new Customer(ssn, name, address, telephoneNumber);
             customers.add(customer);
 
         } else if (choice3 == 2) {
-         /* for (int i=0,i<Customer.size(),i++){
-               System.out.println((i+1)+ Customer.get(i));
-
-            }
-            System.out.println("number for person you want to change");
-           int change = input.nextInt();
-           System.out.println("what do you want to change")
-           customer.setName(input.nextLine();
-           System.out.println(("1.Name"),("2 bal"));
-           change = input.nextInt();
-           if (change==1){
-               Customer.setName(input.nextLine());
-           }
-          */
+           // System.out.println(myApp2.GetCustomer());
 
         } else if (choice3 == 3) {
             System.out.println("View Customer option");
+            for (Customer customer : customers) {
+                System.out.println(customer);
+            }
 
         } else if (choice3 == 4) {
+            myApp2.GetCustomer();
             System.out.println("Remove Customer option");
 
         } else if (choice3 == 5) {
             System.out.println("Exit option");
         }
     }
-
-        private void ViewRoomOptions() {
+        private void ViewRoomOptions () {
             System.out.println("1. Add room ");
             System.out.println("2. Edit room ");
             System.out.println("3. View room ");
@@ -161,7 +164,3 @@ public class Main {
             }
         }
     }
-
-
-
-
